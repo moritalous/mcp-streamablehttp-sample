@@ -1,105 +1,107 @@
 # MCP Streamable HTTP Sample
 
-このリポジトリは、Model Context Protocol (MCP) の Streamable HTTP 実装のサンプルコードを提供します。
+This repository provides sample code for the Streamable HTTP implementation of the Model Context Protocol (MCP).
 
-## 概要
+## Overview
 
-MCP (Model Context Protocol) は、クライアントとサーバー間の通信プロトコルで、複数の通信方式をサポートしています。このサンプルでは、Streamable HTTP 方式を使用した実装例を示しています。
+MCP (Model Context Protocol) is a communication protocol between clients and servers that supports multiple communication methods. This sample demonstrates an implementation using the Streamable HTTP method.
 
-Streamable HTTP は以下の特徴を持ちます：
+Streamable HTTP has the following characteristics:
 
-- HTTP POST リクエストでメッセージを送信
-- HTTP GET リクエストで Server-Sent Events (SSE) ストリームを確立
-- セッション管理によるステートフルな通信
+- Sending messages via HTTP POST requests
+- Establishing Server-Sent Events (SSE) streams via HTTP GET requests
+- Stateful communication through session management
 
-## 機能
+## Features
 
-このサンプルには以下の機能が含まれています：
+This sample includes the following features:
 
-- サーバー側：
-  - Streamable HTTP トランスポートの実装
-  - 複数クライアント接続のサポート
-  - ツール機能の提供（echo、add）
-  - セッション管理
+- Server-side:
+  - Implementation of Streamable HTTP transport
+  - Support for multiple client connections
+  - Provision of tool functions (echo, add)
+  - Session management
 
-- クライアント側：
-  - サーバーへの接続
-  - ツール一覧の取得
-  - ツールの呼び出し
+- Client-side:
+  - Connection to the server
+  - Retrieving tool lists
+  - Invoking tools
 
-## 前提条件
+## Prerequisites
 
-- Node.js 18.x 以上
-- npm または yarn
+- Node.js 18.x or higher
+- npm or yarn
 
-## インストール
+## Installation
 
 ```bash
-# リポジトリをクローン（サブモジュールを含む）
+# Clone the repository (including submodules)
 git clone --recursive https://github.com/moritalous/mcp-streamablehttp-sample.git
 cd mcp-streamablehttp-sample
 
-# 依存関係をインストール
+# Install dependencies
 npm install
 
-# TypeScript SDKをセットアップ
+# Set up TypeScript SDK
 npm run setup
 ```
 
-## ビルド
+## Build
 
 ```bash
 npm run build
 ```
 
-## 実行方法
+## How to Run
 
-### サーバーの起動
+### Starting the Server
 
 ```bash
 npm run start:server
 ```
 
-サーバーは、デフォルトでポート 3001 で起動します。環境変数 `PORT` を設定することで、ポート番号を変更できます。
+The server starts on port 3001 by default. You can change the port number by setting the `PORT` environment variable.
 
-### クライアントの実行
+### Running the Client
 
 ```bash
 npm run start:client
 ```
 
-クライアントは、デフォルトで `http://localhost:3001/mcp` に接続します。環境変数 `MCP_SERVER_URL` を設定することで、接続先を変更できます。
+The client connects to `http://localhost:3001/mcp` by default. You can change the connection destination by setting the `MCP_SERVER_URL` environment variable.
 
-## 開発
+## Development
 
-開発モードでの実行：
+Running in development mode:
 
 ```bash
-# サーバー（開発モード）
+# Server (development mode)
 npm run dev:server
 
-# クライアント（開発モード）
+# Client (development mode)
 npm run dev:client
 ```
 
-## プロジェクト構成
+## Project Structure
 
 ```
 mcp-streamablehttp-sample/
 ├── src/
-│   ├── client.ts     # クライアント実装
-│   └── server.ts     # サーバー実装
-├── typescript-sdk/   # MCP TypeScript SDK (Gitサブモジュール)
-├── dist/             # コンパイル済みコード
-├── package.json      # プロジェクト設定
-└── tsconfig.json     # TypeScript 設定
+│   ├── client.ts     # Client implementation
+│   └── server.ts     # Server implementation
+├── typescript-sdk/   # MCP TypeScript SDK (Git submodule)
+├── dist/             # Compiled code
+├── package.json      # Project configuration
+└── tsconfig.json     # TypeScript configuration
 ```
 
-## ライセンス
+## License
 
 MIT
 
-## 参考資料
+## References
 
-- [Model Context Protocol 仕様](https://spec.modelcontextprotocol.io/)
-- [MCP SDK ドキュメント](https://github.com/modelcontextprotocol/typescript-sdk)
+- [Model Context Protocol Specification](https://spec.modelcontextprotocol.io/)
+- [MCP SDK Documentation](https://github.com/modelcontextprotocol/typescript-sdk)
+
+*Note: A Japanese version of this README is available at [README_ja.md](README_ja.md)*
