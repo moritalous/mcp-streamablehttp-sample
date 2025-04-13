@@ -1,4 +1,4 @@
-# MCP Streamable HTTP Sample
+# MCP Streamable HTTP サンプル
 
 このリポジトリは、Model Context Protocol (MCP) の Streamable HTTP 実装のサンプルコードを提供します。
 
@@ -103,3 +103,5 @@ MIT
 
 - [Model Context Protocol 仕様](https://spec.modelcontextprotocol.io/)
 - [MCP SDK ドキュメント](https://github.com/modelcontextprotocol/typescript-sdk)
+
+*注: このREADMEの英語版は [README.md](README.md) で利用できます*
